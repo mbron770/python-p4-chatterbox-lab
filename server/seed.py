@@ -6,6 +6,7 @@ from faker import Faker
 
 from app import app
 from models import db, Message
+import time
 
 fake = Faker()
 
@@ -23,11 +24,17 @@ def make_messages():
         message = Message(
             body=fake.sentence(),
             username=rc(usernames),
-        )
+        ) 
+        print(f'loading - {20 - i} seconds left')
         messages.append(message)
+        db.session.add(message)
+        db.session.commit()
+        time.sleep(1)
+    print('messages loaded!')
+        
 
-    db.session.add_all(messages)
-    db.session.commit()        
+    # db.session.add_all(messages)
+    # db.session.commit()        
 
 if __name__ == '__main__':
     with app.app_context():

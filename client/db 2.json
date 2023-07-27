@@ -8,7 +8,7 @@
     },
     {
       "id": 2,
-      "body": "Hi brother",
+      "body": "Hi brother ",
       "username": "Duane",
       "created_at": "2021-01-07T09:16:37"
     },
@@ -29,16 +29,6 @@
       "body": "You got this! 💪",
       "username": "Liza",
       "created_at": "2021-01-07T09:21:11"
-    },
-    {
-      "username": "Duane",
-      "body": "dddf",
-      "id": 6
-    },
-    {
-      "username": "Duane",
-      "body": "dfdfdf",
-      "id": 7
     }
   ]
 }
